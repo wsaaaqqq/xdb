@@ -1,3 +1,5 @@
+[[中文简介]](https://github.com/wsaaaqqq/xdb/blob/main/README-CN.md) [[英文简介]](https://github.com/wsaaaqqq/xdb/blob/main/README.md)
+
 # xdb framework for jdbc
 xdb是一种jdbc工具包，可以方便的进行jdbc操作，并且很容易的与springboot进行集成。
 ## 示例
