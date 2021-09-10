@@ -18,7 +18,7 @@ class SqlToolTest {
 
     @Test
     void file() {
-        Xdb.sqlFile("user_query1.sql")
+        Xdb.sqlFile("user/user_query.sql")
                 .sqlArg("ids", Arrays.asList(1, 2, 3))
 //                .sqlArg("name","n1")
                 .format()

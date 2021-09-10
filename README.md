@@ -17,7 +17,7 @@ Xdb.sql("select id,name from user where name like '%'||:name||'%' and id=:id")
 or 
 ~~~
 #### Prepare an SQL file that allows multiple query parameters
-#### files/sql/user_query1.sql
+#### files/sql/user_query.sql
 ------------------------------
 select id,name from user 
 where 1=1
@@ -26,7 +26,7 @@ where 1=1
 ~~~
 ~~~
 #### According to the actual input parameters, open the query criteria of the corresponding parameters
-Xdb.sqlFile("files/sql/user_query1.sql")
+Xdb.sqlFile("files/sql/user_query.sql")
     .sqlArg("name","xht") //only “and name like...” will take effect 
     .pageIndex(1)
     .pagePerSize(10)

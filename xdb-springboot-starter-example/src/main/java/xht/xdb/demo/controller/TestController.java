@@ -1,11 +1,13 @@
 package xht.xdb.demo.controller;
 
+import org.springframework.web.bind.annotation.RequestParam;
 import xht.xdb.Xdb;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import xht.xdb.demo.jpa.User;
 import xht.xdb.demo.jpa.UserRepository;
+import xht.xdb.util.MapUtil;
 
 import java.util.List;
 import java.util.Map;
@@ -24,9 +26,16 @@ public class TestController {
     }
 
     @RequestMapping("/q")
-    public List<Map<String, Object>> query(){
-        return Xdb.sql("select id,name from t_user where info like '%'||:info||'%'")
-                .sqlArg("info","1")
+    public List<Map<String, Object>> query(
+            @RequestParam(required = false) String info,
+            @RequestParam(required = false) String[] ids
+    ){
+        MapUtil sqlArgs = MapUtil.init()
+                .addOnlyNotNull("info",info)
+                .addOnlyNotNull("ids",ids)
+                ;
+        return Xdb.sqlFile("user/user_query.sql")
+                .sqlArgs(sqlArgs)
                 .pageIndex(1)
                 .pagePerSize(10)
                 .executeQuery()

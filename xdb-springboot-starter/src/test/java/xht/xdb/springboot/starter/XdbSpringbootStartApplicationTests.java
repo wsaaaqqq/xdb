@@ -26,7 +26,7 @@ class XdbSpringbootStartApplicationTests {
 
     @Test
     void test1() {
-        List<Map<String, Object>> maps = Xdb.sqlFile("user_query1.sql")
+        List<Map<String, Object>> maps = Xdb.sqlFile("user/user_query.sql")
                 .sqlArg("ids", Arrays.asList(1, 2, 3))
                 .sqlArg("info","info")
                 .pageIndex(1)
@@ -39,9 +39,8 @@ class XdbSpringbootStartApplicationTests {
     @Test
     void test2() {
         SqlTool st = Xdb
-//                .sqlFile("user_query1.sql")
-//                .sqlFile("user_query1")
-                .sqlFile("user/user_query1")
+//                .sqlFile("user/user_query.sql")
+                .sqlFile("user/user_query")
                 .sqlArg("ids", Arrays.asList(1, 2, 3))
                 .sqlArg("info","info")
                 .pageIndex(1)

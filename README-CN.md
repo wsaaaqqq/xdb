@@ -16,7 +16,7 @@ Xdb.sql("select id,name from user where name like '%'||:name||'%' and id=:id")
 or 
 ~~~
 #### 准备一个允许多个查询参数的sql文件
-#### files/sql/user_query1.sql
+#### files/sql/user_query.sql
 ------------------------------
 select id,name from user 
 where 1=1
@@ -25,7 +25,7 @@ where 1=1
 ~~~
 ~~~
 #### 根据实际的入参进行，开启对应参数的查询条件
-Xdb.sqlFile("files/sql/user_query1.sql")
+Xdb.sqlFile("files/sql/user_query.sql")
     .sqlArg("name","xht") //只有 “and name like...” 过滤条件会生效 
     .pageIndex(1)
     .pagePerSize(10)
