@@ -1,7 +1,13 @@
 /.idea/
 /xdb-core/target/
 /xdb-core/.idea/
+/xdb-core/.settings/
 /xdb-springboot-starter/target/
+/xdb-springboot-starter/.settings/
 /xdb-springboot-starter/.idea/
 /xdb-springboot-starter-example/target/
 /xdb-springboot-starter-example/.idea/
+/xdb-springboot-starter-example/.settings/
+*.classpath
+*.factorypath
+*.project
