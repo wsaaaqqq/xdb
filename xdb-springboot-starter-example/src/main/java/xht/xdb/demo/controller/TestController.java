@@ -1,10 +1,10 @@
 package xht.xdb.demo.controller;
 
-import org.springframework.web.bind.annotation.RequestParam;
-import xht.xdb.Xdb;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import xht.xdb.Xdb;
 import xht.xdb.demo.jpa.User;
 import xht.xdb.demo.jpa.UserRepository;
 import xht.xdb.util.MapUtil;
@@ -18,32 +18,26 @@ import java.util.UUID;
 public class TestController {
     private final UserRepository tTestRepository;
 
-    @RequestMapping("/")
-    public List<Map<String, Object>> all(){
-        return Xdb.sql("select id,name,info from t_user")
-                .executeQuery()
-                .result();
-    }
-
-    @RequestMapping("/q")
+    @RequestMapping("/user/")
     public List<Map<String, Object>> query(
             @RequestParam(required = false) String info,
-            @RequestParam(required = false) String[] ids
-    ){
+            @RequestParam(required = false) String[] ids,
+            @RequestParam(required = false) Long p,
+            @RequestParam(required = false) Long s
+    ) {
         MapUtil sqlArgs = MapUtil.init()
-                .addOnlyNotNull("info",info)
-                .addOnlyNotNull("ids",ids)
-                ;
+                .addOnlyNotNull("info", info)
+                .addOnlyNotNull("ids", ids);
         return Xdb.sqlFile("user/user_query.sql")
                 .sqlArgs(sqlArgs)
-                .pageIndex(1)
-                .pagePerSize(10)
+                .pageIndex(p)
+                .pagePerSize(s)
                 .executeQuery()
                 .result();
     }
 
-    @RequestMapping("/s")
-    public User save(){
+    @RequestMapping("/user/s")
+    public User save() {
         String uuid = UUID.randomUUID().toString();
         return tTestRepository.save(new User()
                 .setId(uuid)
@@ -52,8 +46,8 @@ public class TestController {
         );
     }
 
-    @RequestMapping("/r")
-    public int remove(){
+    @RequestMapping("/user/d")
+    public int delete() {
         return Xdb.sql("delete from t_user").executeUpdate().result();
     }
 
