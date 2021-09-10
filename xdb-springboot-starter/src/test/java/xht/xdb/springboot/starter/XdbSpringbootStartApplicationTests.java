@@ -1,4 +1,4 @@
-package org.xht.xdb.springboot.starter;
+package xht.xdb.springboot.starter;
 
 import xht.xdb.Xdb;
 import xht.xdb.sql.SqlTool;
@@ -25,12 +25,27 @@ class XdbSpringbootStartApplicationTests {
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     @Test
-    void contextLoads() {
-        SqlTool st = Xdb.sqlFile("123")
-                .sqlArg("code", Arrays.asList(6,7))
-                .sqlArg("code_full", "GL101B")
-                .pageIndex(0)
-                .pagePerSize(5)
+    void test1() {
+        List<Map<String, Object>> maps = Xdb.sqlFile("user_query1.sql")
+                .sqlArg("ids", Arrays.asList(1, 2, 3))
+                .sqlArg("info","info")
+                .pageIndex(1)
+                .pagePerSize(2)
+                .executeQuery()
+                .result();
+        maps.forEach(System.out::println);
+    }
+
+    @Test
+    void test2() {
+        SqlTool st = Xdb
+//                .sqlFile("user_query1.sql")
+//                .sqlFile("user_query1")
+                .sqlFile("user/user_query1")
+                .sqlArg("ids", Arrays.asList(1, 2, 3))
+                .sqlArg("info","info")
+                .pageIndex(1)
+                .pagePerSize(2)
                 .format();
         List<Map<String, Object>> maps = namedParameterJdbcTemplate.queryForList(st.getSql(), st.getSqlArgs());
         maps.forEach(System.out::println);

@@ -1,5 +1,5 @@
 # Auto Configure
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-org.xht.xdb.springboot.starter.XdbAutoConfiguration
+xht.xdb.springboot.starter.XdbAutoConfiguration
 org.springframework.data.jdbc.repository.config.DialectResolver$JdbcDialectProvider=\
-org.xht.xdb.springboot.starter.dialect.SqliteJdbcDialectProvider
+xht.xdb.springboot.starter.dialect.SqliteJdbcDialectProvider

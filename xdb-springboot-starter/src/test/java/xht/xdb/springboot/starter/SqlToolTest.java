@@ -1,4 +1,4 @@
-package org.xht.xdb.springboot.starter;
+package xht.xdb.springboot.starter;
 
 import xht.xdb.Xdb;
 import org.junit.jupiter.api.Test;
@@ -18,7 +18,7 @@ class SqlToolTest {
 
     @Test
     void file() {
-        Xdb.sqlFile("files/sql/123.sql")
+        Xdb.sqlFile("user_query1.sql")
                 .sqlArg("ids", Arrays.asList(1, 2, 3))
 //                .sqlArg("name","n1")
                 .format()

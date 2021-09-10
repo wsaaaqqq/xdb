@@ -128,7 +128,7 @@ public class SqlFileUtil {
     public static String getSql(String sqlFileRelativePath, MapUtil sqlArgs) {
         String sqlDir = XdbConfig.getSqlDir();
         if (sqlDir == null) {
-            sqlDir = System.getProperty("user.dir");
+            sqlDir = System.getProperty("user.dir").concat("/files/sql/");
             XdbConfig.setSqlDir(sqlDir);
         }
         File file = new File(sqlDir + File.separator + sqlFileRelativePath);
