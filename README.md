@@ -33,4 +33,6 @@ Xdb.sqlFile("files/sql/user_query.sql")
     .executeQuery()
     .result();
 ~~~
-For more usage, please refer to： _**xdb-springboot-starter-example**_
+
+For more usage, please refer to： 
+[[xdb-springboot-starter-example]](https://github.com/wsaaaqqq/xdb/tree/main/xdb-springboot-starter-example)
