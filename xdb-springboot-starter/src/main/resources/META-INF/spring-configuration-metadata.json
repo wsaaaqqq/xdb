@@ -1,0 +1,12 @@
+{
+  "properties": [
+    {
+      "name": "xdb.sql-dir",
+      "type": "java.lang.String",
+      "defaultValue": "files/sql",
+      "description": "sql file path."
+    }
+  ],
+  "hints": [
+  ]
+}

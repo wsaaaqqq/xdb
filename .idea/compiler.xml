@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="xdb-core" />
+        <module name="xdb-springboot-starter-demo" />
+        <module name="xdb-springboot-starter" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="aa" target="1.7" />
+      <module name="xdb" target="1.5" />
+      <module name="xdb-core" target="1.7" />
+      <module name="xdb-springboot-starter" target="1.8" />
+      <module name="xdb-springboot-starter-demo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="xdb-springboot-starter" options="" />
+      <module name="xdb-springboot-starter-demo" options="-parameters" />
+    </option>
+  </component>
+</project>
