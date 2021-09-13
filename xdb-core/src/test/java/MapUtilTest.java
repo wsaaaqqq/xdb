@@ -1,18 +1,20 @@
-import xht.xdb.util.MapUtil;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import org.xht.xdb.util.MapUtil;
 
-import java.util.Map;
+import java.util.Arrays;
+import java.util.HashMap;
 
-public class MapUtilTest {
+class MapUtilTest {
     public static void main(String[] args) {
-        MapUtil init = MapUtil.init();
-        init.add("czId", "id1");
-        init.add("age", 1);
-        Map<String,Object> map = init
-                .value();
-        MapUtil m1 = MapUtil.wrap(map);
-        MapUtil m2 = MapUtil.wrap(map);
-        m2.add("xx",1);
-        m1.debug();
-        m2.debug();
+        String json = MapUtil.init().add("name", "a")
+                .add("arr", new String[]{"s1", "s2", "s3"})
+                .add("list", Arrays.asList(1, 2, 3))
+                .toJson();
+        HashMap<String, Object> hashMap = new Gson().fromJson(json, HashMap.class);
+        System.out.println(MapUtil.wrap(hashMap));
+        JsonObject jsonObject = new Gson().fromJson(json, JsonObject.class);
+        System.out.println(MapUtil.wrap(jsonObject));
     }
+
 }

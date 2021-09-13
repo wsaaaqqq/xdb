@@ -1,5 +1,5 @@
-import xht.xdb.Xdb;
-import xht.xdb.enums.DbType;
+import org.xht.xdb.Xdb;
+import org.xht.xdb.enums.DbType;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.dbcp.BasicDataSource;
 

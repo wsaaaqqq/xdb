@@ -1,4 +1,4 @@
-import xht.xdb.util.MapUtil;
+import org.xht.xdb.util.MapUtil;
 
 import java.util.Map;
 

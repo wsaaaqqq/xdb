@@ -1,5 +1,5 @@
-import xht.xdb.Xdb;
-import xht.xdb.enums.DbType;
+import org.xht.xdb.Xdb;
+import org.xht.xdb.enums.DbType;
 import org.apache.commons.dbcp.BasicDataSource;
 import org.sqlite.SQLiteDataSource;
 import org.sqlite.javax.SQLiteConnectionPoolDataSource;
