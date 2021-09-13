@@ -1,8 +1,7 @@
 [[中文简介]](https://github.com/wsaaaqqq/xdb/blob/main/README-CN.md) [[英文简介]](https://github.com/wsaaaqqq/xdb/blob/main/README.md)
 
 # xdb framework for jdbc
-The xdb framework makes it easier to use a relational database. It is very easy to integrate with spring boot.
-
+XdB is a JDBC toolkit, which can facilitate JDBC operations, especially complex query operations, and is easy to integrate with spring boot.
 ## usage
 
 ~~~
