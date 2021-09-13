@@ -1,4 +1,4 @@
-package xht.xdb.springboot.starter.dialect;
+package org.xht.xdb.springboot.starter.dialect;
 
 import org.springframework.data.jdbc.repository.config.DialectResolver;
 import org.springframework.data.relational.core.dialect.Dialect;

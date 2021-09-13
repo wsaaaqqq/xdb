@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package xht.xdb.springboot.starter.dialect;
+package org.xht.xdb.springboot.starter.dialect;
 
 import org.springframework.data.relational.core.dialect.MySqlDialect;
 

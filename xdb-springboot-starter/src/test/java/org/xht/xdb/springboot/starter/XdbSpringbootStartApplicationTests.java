@@ -1,4 +1,4 @@
-package xht.xdb.springboot.starter;
+package org.xht.xdb.springboot.starter;
 
 import xht.xdb.Xdb;
 import xht.xdb.sql.SqlTool;
