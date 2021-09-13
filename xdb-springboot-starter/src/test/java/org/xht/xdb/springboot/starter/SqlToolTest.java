@@ -1,7 +1,7 @@
 package org.xht.xdb.springboot.starter;
 
-import xht.xdb.Xdb;
 import org.junit.jupiter.api.Test;
+import org.xht.xdb.Xdb;
 
 import java.util.Arrays;
 

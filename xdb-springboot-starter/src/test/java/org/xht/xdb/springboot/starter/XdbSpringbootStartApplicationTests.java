@@ -1,13 +1,13 @@
 package org.xht.xdb.springboot.starter;
 
-import xht.xdb.Xdb;
-import xht.xdb.sql.SqlTool;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.xht.xdb.Xdb;
+import org.xht.xdb.sql.SqlTool;
 
 import java.util.Arrays;
 import java.util.List;
