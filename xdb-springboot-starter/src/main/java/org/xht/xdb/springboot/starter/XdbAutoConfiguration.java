@@ -1,8 +1,5 @@
 package org.xht.xdb.springboot.starter;
 
-import xht.xdb.Xdb;
-import xht.xdb.XdbConfig;
-import xht.xdb.enums.DbType;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
@@ -10,6 +7,9 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
+import org.xht.xdb.Xdb;
+import org.xht.xdb.XdbConfig;
+import org.xht.xdb.enums.DbType;
 
 import javax.sql.DataSource;
 
