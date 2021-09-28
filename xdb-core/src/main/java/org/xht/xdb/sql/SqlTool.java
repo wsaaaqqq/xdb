@@ -1,13 +1,14 @@
 package org.xht.xdb.sql;
 
+import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 import org.xht.xdb.enums.DbType;
 import org.xht.xdb.sql.statement.ConnTool;
 import org.xht.xdb.util.MapUtil;
 import org.xht.xdb.util.SqlFileUtil;
-import lombok.Getter;
-import lombok.extern.slf4j.Slf4j;
 
 import java.math.BigDecimal;
+import java.sql.ResultSet;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -58,6 +59,20 @@ public class SqlTool {
         setArraySqlArgs();
         limitSql();
         return ConnTool.executeQuery(this.sql, this.sqlArgs, autoCloseConnection);
+    }
+
+    /**
+     * <pre>
+     *     执行查询语句，返回查询结果
+     * </pre>
+     *
+     * @return ResultQuery
+     */
+    public ResultSet executeQueryResultSet() {
+        getSqlFromFile();
+        setArraySqlArgs();
+        limitSql();
+        return ConnTool.executeQueryResultSet(this.sql, this.sqlArgs);
     }
 
     /**

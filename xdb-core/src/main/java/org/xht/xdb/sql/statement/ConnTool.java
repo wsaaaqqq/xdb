@@ -1,13 +1,13 @@
 package org.xht.xdb.sql.statement;
 
-import org.xht.xdb.util.Closes;
-import org.xht.xdb.util.MapUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.xht.xdb.Xdb;
 import org.xht.xdb.sql.ResultBatch;
 import org.xht.xdb.sql.ResultQuery;
 import org.xht.xdb.sql.ResultUpdate;
+import org.xht.xdb.util.Closes;
+import org.xht.xdb.util.MapUtil;
 import org.xht.xdb.util.ResultSetUtil;
-import lombok.extern.slf4j.Slf4j;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -63,6 +63,24 @@ public class ConnTool {
             }
         }
         return r;
+    }
+
+    /**
+     * <pre>
+     *     执行查询语句，返回查询结果集合，若查询结果为空或执行失败时返回空的list实例对象
+     * </pre>
+     *
+     * @return ResultSet
+     */
+    public static ResultSet executeQueryResultSet(String sql, MapUtil sqlArgs) {
+        ResultSet result = null;
+        try {
+            Connection conn = Xdb.getConnection();
+            result = sqlArgs(conn, sql, sqlArgs).executeQuery();
+        } catch (Exception e) {
+            log.error("", e);
+        }
+        return result;
     }
 
     private static NamedParameterStatement sqlArgs(Connection conn, String sql, MapUtil sqlArgs) throws SQLException {
