@@ -9,7 +9,7 @@ XdB is a JDBC toolkit, which can facilitate JDBC operations, especially complex 
 <dependency>
     <groupId>io.github.wsaaaqqq</groupId>
     <artifactId>xdb-core</artifactId>
-    <version>1.0.2-RELEASE</version>
+    <version>1.0.5-RELEASE</version>
 </dependency>
 
 or 
@@ -22,7 +22,7 @@ or
 <dependency>
     <groupId>io.github.wsaaaqqq</groupId>
     <artifactId>xdb-springboot-starter</artifactId>
-    <version>1.0.4-RELEASE</version>
+    <version>1.0.5-RELEASE</version>
 </dependency>
 ~~~
 
