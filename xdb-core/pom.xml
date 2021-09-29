@@ -6,7 +6,7 @@
 <!--    组织名必须与jira上创建项目时保持一致-->
     <groupId>io.github.wsaaaqqq</groupId>
     <artifactId>xdb-core</artifactId>
-    <version>1.0.1-RELEASE</version>
+    <version>1.0.2-RELEASE</version>
 <!--    <version>1.0.0-SNAPSHOT</version>-->
     <description>xdb-core for jdbc</description>
     <name>xdb-core for jdbc</name>
