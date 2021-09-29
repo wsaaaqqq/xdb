@@ -3,6 +3,28 @@
 # xdb framework for jdbc
 xdb是一种jdbc工具包，可以方便的进行jdbc操作,尤其是复杂的查询操作，并且很容易的与springboot进行集成。
 ## 示例
+~~~
+## pom.xml
+------------------------------
+<dependency>
+    <groupId>io.github.wsaaaqqq</groupId>
+    <artifactId>xdb-core</artifactId>
+    <version>1.0.5-RELEASE</version>
+</dependency>
+
+or 
+
+## in springboot project
+<dependency>
+    <groupId>io.github.wsaaaqqq</groupId>
+    <artifactId>xdb-springboot-starter</artifactId>
+    <version>1.0.5-RELEASE</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+~~~
 
 ~~~
 #### 准备一个允许多个查询参数的sql文件
