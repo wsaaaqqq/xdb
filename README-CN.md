@@ -86,4 +86,4 @@ public List<Map<String, Object>> query(
 ~~~
 
 更多使用方法,请参阅：
-[[xdb-springboot-starter-example]](https://github.com/wsaaaqqq/xdb/tree/main/xdb-springboot-starter-example)
+[[wiki]](https://github.com/wsaaaqqq/xdb/wiki)
