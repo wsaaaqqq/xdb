@@ -3,6 +3,11 @@
 # xdb framework for jdbc
 XdB is a JDBC toolkit, which can facilitate JDBC operations, especially complex query operations, and is easy to integrate with spring boot.
 ## usage
+example project： 
+[[xdb-springboot-starter-example]](https://github.com/wsaaaqqq/xdb/tree/main/xdb-springboot-starter-example)
+
+> The main steps are as follows: 
+ 
 ~~~
 ## pom.xml
 ------------------------------
