@@ -18,6 +18,16 @@ import java.util.UUID;
 public class TestController {
     private final UserRepository tTestRepository;
 
+    @RequestMapping("/user/s")
+    public User save() {
+        String uuid = UUID.randomUUID().toString();
+        return tTestRepository.save(new User()
+                .setId(uuid)
+                .setName("name".concat(uuid))
+                .setInfo("info".concat(uuid))
+        );
+    }
+
     @RequestMapping("/user/")
     public List<Map<String, Object>> query(
             @RequestParam(required = false) String info,
@@ -34,16 +44,6 @@ public class TestController {
                 .pagePerSize(s)
                 .executeQuery()
                 .result();
-    }
-
-    @RequestMapping("/user/s")
-    public User save() {
-        String uuid = UUID.randomUUID().toString();
-        return tTestRepository.save(new User()
-                .setId(uuid)
-                .setName("name".concat(uuid))
-                .setInfo("info".concat(uuid))
-        );
     }
 
     @RequestMapping("/user/d")
