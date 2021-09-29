@@ -5,7 +5,7 @@
 <!--    组织名必须与jira上创建项目时保持一致-->
     <groupId>io.github.wsaaaqqq</groupId>
     <artifactId>xdb-springboot-starter</artifactId>
-    <version>1.0.4-RELEASE</version>
+    <version>1.0.5-RELEASE</version>
 <!--    <version>1.0.1-SNAPSHOT</version>-->
     <name>xdb-springboot-starter</name>
     <description>Demo project for Spring Boot</description>
@@ -30,7 +30,7 @@
         <dependency>
             <groupId>io.github.wsaaaqqq</groupId>
             <artifactId>xdb-core</artifactId>
-            <version>1.0.2-RELEASE</version>
+            <version>1.0.5-RELEASE</version>
         </dependency>
 
         <dependency>
@@ -95,16 +95,16 @@
             <url>https://github.com/wsaaaqqq/xdb</url>
         </developer>
     </developers>
-<!--    <distributionManagement>-->
-<!--        <snapshotRepository>-->
-<!--            <id>ossrh</id>-->
-<!--            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>-->
-<!--        </snapshotRepository>-->
-<!--        <repository>-->
-<!--            <id>ossrh</id>-->
-<!--            <url>https://s01.oss.sonatype.org/content/repositories/releases</url>-->
-<!--        </repository>-->
-<!--    </distributionManagement>-->
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/releases</url>
+        </repository>
+    </distributionManagement>
     <build>
         <plugins>
             <!-- Gpg Signature -->
