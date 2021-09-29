@@ -16,13 +16,13 @@ or
 
 ## in springboot project
 <dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-data-jpa</artifactId>
-</dependency>
-<dependency>
     <groupId>io.github.wsaaaqqq</groupId>
     <artifactId>xdb-springboot-starter</artifactId>
     <version>1.0.5-RELEASE</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-jpa</artifactId>
 </dependency>
 ~~~
 
