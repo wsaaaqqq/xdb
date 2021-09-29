@@ -2,8 +2,10 @@
 
 # xdb framework for jdbc
 xdb是一种jdbc工具包，可以方便的进行jdbc操作,尤其是复杂的查询操作，并且很容易的与springboot进行集成。
-## 示例
-example project： 
+
+## 使用方法
+
+参考示例项目： 
 [[xdb-springboot-starter-example]](https://github.com/wsaaaqqq/xdb/tree/main/xdb-springboot-starter-example)
 
 > 主要步骤如下:
