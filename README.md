@@ -88,4 +88,4 @@ public List<Map<String, Object>> query(
 ~~~
 
 For more usage, please refer to： 
-[[xdb-springboot-starter-example]](https://github.com/wsaaaqqq/xdb/tree/main/xdb-springboot-starter-example)
+[[wiki]](https://github.com/wsaaaqqq/xdb/wiki)
