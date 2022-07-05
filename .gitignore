@@ -2,6 +2,7 @@
 /xdb-core/target/
 /xdb-core/.idea/
 /xdb-core/.settings/
+/xdb-core/xdb-core.iml
 /xdb-springboot-starter/target/
 /xdb-springboot-starter/.settings/
 /xdb-springboot-starter/.idea/
