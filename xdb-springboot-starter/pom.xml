@@ -5,7 +5,7 @@
 <!--    组织名必须与jira上创建项目时保持一致-->
     <groupId>io.github.wsaaaqqq</groupId>
     <artifactId>xdb-springboot-starter</artifactId>
-    <version>1.0.5-RELEASE</version>
+    <version>1.0.6-RELEASE</version>
 <!--    <version>1.0.1-SNAPSHOT</version>-->
     <name>xdb-springboot-starter</name>
     <description>Demo project for Spring Boot</description>
@@ -58,7 +58,7 @@
         <dependency>
             <groupId>org.xerial</groupId>
             <artifactId>sqlite-jdbc</artifactId>
-            <version>3.34.0</version>
+            <version>3.36.0.3</version>
             <optional>true</optional>
         </dependency>
     </dependencies>
@@ -79,7 +79,7 @@
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
     <scm>
@@ -111,7 +111,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.6</version>
+                <version>3.0.1</version>
                 <executions>
                     <execution>
                         <phase>verify</phase>
@@ -124,7 +124,7 @@
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.7</version>
+                <version>1.6.13</version>
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>ossrh</serverId>
